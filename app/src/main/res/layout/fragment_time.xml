@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.time.TimeFragment">
+    <LinearLayout
+        android:id="@+id/tableHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:text="From"
+            android:layout_width="0dp"
+            android:paddingVertical="10dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:paddingVertical="10dp"
+            android:text="To"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+        <TextView
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:paddingVertical="10dp"            android:text="Duration"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+      <TextView
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:paddingVertical="10dp"
+            android:text="Interval"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+        <TextView
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:text="Sum"
+            android:paddingVertical="10dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+    </LinearLayout>
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_below="@+id/tableHeader"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/timeTableRecylerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+    <Button
+        android:layout_margin="5dp"
+        android:height="80dp"
+        android:text="Add"
+        android:layout_alignParentBottom="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/addBtn"/>
+    <Button
+        android:layout_margin="5dp"
+        android:height="80dp"
+        android:text="Delete"
+        android:layout_toRightOf="@id/addBtn"
+        android:layout_alignParentBottom="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/deleteBtn"/>
+
+    <Button
+        android:id="@+id/editBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@id/deleteBtn"
+        android:layout_margin="5dp"
+        android:height="80dp"
+        android:text="Edit" />
+    <Button
+
+        android:height="80dp"
+        android:layout_margin="5dp"
+        android:text="Update To Cloud"
+        android:layout_toRightOf="@id/editBtn"
+        android:layout_alignParentBottom="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/updateToCloud"/>
+</RelativeLayout>

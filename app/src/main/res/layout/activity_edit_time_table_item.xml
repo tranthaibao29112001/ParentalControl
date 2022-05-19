@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditTimeTableItemActivity">
+
+    <TextView
+        android:id="@+id/from"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:padding="10dp"
+        android:gravity="center"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:text="From" />
+
+    <EditText
+        android:id="@+id/fromEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/from"
+        android:inputType="none"
+        android:focusable="false"
+        android:clickable="false"
+        android:cursorVisible="false"
+        />
+    <TextView
+        android:gravity="center"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:layout_below="@+id/from"
+        android:id="@+id/to"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="To" />
+
+    <EditText
+
+        android:id="@+id/toEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/to"
+        android:layout_below="@+id/from"
+        android:inputType="none"
+        android:focusable="false"
+        android:clickable="false"
+        android:cursorVisible="false"
+        />
+
+    <TextView
+        android:id="@+id/duration"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/to"
+        android:gravity="center"
+        android:text="Duraion"
+        android:textSize="16dp"
+        android:textStyle="bold" />
+
+    <EditText
+
+        android:id="@+id/durationEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/duration"
+        android:layout_below="@+id/to"
+        android:inputType="number"
+        />
+
+    <TextView
+        android:id="@+id/interval"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/duration"
+        android:gravity="center"
+        android:text="Interval"
+        android:textSize="16dp"
+        android:textStyle="bold" />
+
+    <EditText
+
+        android:id="@+id/intervalEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/interval"
+        android:layout_below="@+id/duration"
+        android:inputType="number"
+        />
+
+    <TextView
+        android:id="@+id/sum"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/interval"
+        android:gravity="center"
+        android:text="Sum"
+        android:textSize="16dp"
+        android:textStyle="bold" />
+
+    <EditText
+
+        android:id="@+id/sumEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/sum"
+        android:layout_below="@+id/interval"
+        android:inputType="number"
+        />
+    <Button
+        android:layout_margin="20dp"
+        android:layout_below="@+id/sum"
+        android:id="@+id/submitBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit"/>
+
+</RelativeLayout>
